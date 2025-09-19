@@ -1,0 +1,50 @@
+<!DOCTYPE html lang="en-us">
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Wordguesser</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1 class="display-4">Play Wordguesser!</h1>
+    </div>
+    <div class="container">
+      
+<div class="alert alert-warning">
+  <p class="lead">
+    Wrong Guesses:
+    <span class="guesses"></span>
+  </p>
+</div>
+
+<p class="alert alert-success">
+  Word so far:
+  <span class="word">------</span>
+</p>
+
+<form action="/guess" method="post">
+  <div class="form-group row">
+    <label for="guess" class="col-md-2 col-form-label">Guess a letter:</label>
+    <input type="text" name="guess" autocomplete="off"
+           class="form-control col-md-1"/>
+    <input type="submit" value="Guess!" class="col-md-2 btn btn-success"/>
+  </div>
+</form>
+
+<!-- This form is incomplete--it needs a destination URL as well as a method: -->
+<form method="post" action="/create">
+  <div class="form-row py-3 border-top">
+    <input type="submit" value="New Game" class="col-md-2 offset-md-5 btn btn-primary form-control"/>
+  </div>
+</form>
+
+
+    </div>
+  </body>
+</div>
+</body>
+</html>
